@@ -15,6 +15,11 @@ public class Sushi : MonoBehaviour
     [Header("StarterAseet")]
     ThirdPersonController _controller;
 
+    [SerializeField]
+    [Header("パーティクル")]
+    ParticleSystem _particle;
+
+
     private void Start()
     {
         _controller = GetComponent<ThirdPersonController>();
@@ -35,7 +40,14 @@ public class Sushi : MonoBehaviour
             ScoreManager.Instance.ScoreUp(_score);
             UIManager.Instance.ScoreText.text = ScoreManager.Instance.Score.ToString();
             UIManager.Instance.HPUp(20);
+            Instantiate(_particle, transform.position, Quaternion.identity);
+
             Destroy(gameObject);
+
+            if (_score == 20)
+            {
+                print("GameClear");
+            }
         }
     }
 

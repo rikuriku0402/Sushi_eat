@@ -115,6 +115,7 @@ MonoBehaviour:
   _score: 1
   _controller: {fileID: 4416926081852918490, guid: 64dce48905ffd9b4293e595fa6941544,
     type: 3}
+  _particle: {fileID: 19800018, guid: a40b64bf23366dc42a892af2c6ff6140, type: 3}
 --- !u!54 &-8196123690765755856
 Rigidbody:
   m_ObjectHideFlags: 0
